@@ -1,0 +1,494 @@
+/*Used everywhere*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.fit-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    display: block;
+    border-radius: 16px;
+}
+
+.fit-image-center {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 16px;
+}
+
+.responsive-image{
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-usual, .button-small{
+    border: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    padding: 15px 30px;
+    background-color: var(--color-lime);
+    color: var(--color-rich-black);
+    border-color: transparent;
+}
+
+.button-small{
+    padding: 10px 25px;
+}
+
+.button-usual:hover, .button-small:hover{
+    border-color: var(--color-lime);
+    color: var(--color-lime);
+    background-color: transparent;
+}
+
+.text-color-white{
+    color: var(--color-white-smoke);
+}
+
+.center-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.section-gap{
+    margin-top: 80px;
+}
+/*-----*/
+
+/*Styles for Navigation bar*/
+.baner{
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/main background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body {
+    background-color: var(--color-rich-black);
+}
+
+.navbar-logo{
+   margin-right: 100px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.navbar-menu-item {
+    text-decoration: none;
+    color: var(--color-white-smoke);
+}
+
+.navbar-menu-item:hover {
+    color: var(--color-lime);
+}
+
+.nav-container{
+    background-color: transparent;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    height: 60px;
+}
+
+.logo_menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-menu{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-self: center;
+}
+
+.navbar-icons img{ 
+    cursor: pointer;
+}
+
+.navbar-icons{
+    display: none;
+}
+
+.hide{
+    display: none;
+}
+
+/*-----*/
+
+/*Styles for the baner section*/ 
+.first-section-content{ 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 110px; 
+} 
+
+.first-section-content > .button-usual { 
+    margin-top: 80px; 
+    margin-bottom: 110px; 
+} 
+
+.first-section-content > h3 { 
+    margin-top: 30px; 
+}
+/*-----*/ 
+
+/*Styles for the Who we are section*/
+.carousel-container {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.carousel-wrapper {
+    display: flex;
+    gap: 60px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 0 58px; /* button spacing */
+    box-sizing: border-box;
+}
+
+.carousel-card {
+    flex: 0 0 calc(33.333% - 40px); /* card width including gap */
+    background-color: #1D1D1D;
+    border-radius: 14px;
+    text-align: center;
+    padding: 40px 60px;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.carousel-card.active {
+    background-color: #D2FF28;
+    color: #1D1D1D;
+}
+
+.carousel-icon {
+    margin-bottom: 20px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+.carousel-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+/*-----*/
+
+/*styles for section why choose us*/
+h2 > span {
+    color: var(--color-lime, #D2FF28);
+}
+
+.third-section-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.imessage {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    gap: 52px;
+    justify-content: center;
+}
+
+.imessage p {
+    position: relative;
+    background-color: var(--color-lime);
+    color: var(--color-rich-black);
+    border-radius: 12px;
+    max-width: 570px;
+    padding: 20px;
+}
+
+.imessage p::after {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: -20px; 
+    width: 38px; 
+    height: 38px; 
+    background-color: var(--color-lime);
+    clip-path: polygon(100% 0, 0 100%, 100% 100%); 
+    border-bottom-left-radius: 6px;
+}
+
+.message_float{
+    margin-left: 70px;
+}
+/*-----*/
+
+/*Styles for section our services*/
+.services_wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+    gap: 60px;
+}
+
+.services-card{
+    background-color: var(--color-light-black);
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;  
+} 
+
+.accent-heading {
+    color: var(--color-lime);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+
+.rating-block{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: auto;
+    flex-direction: row;
+}
+
+.gap-paragraph{
+    margin-bottom: 48px;
+}
+
+.star-image{
+    max-width: 100%;
+    height: auto;
+}
+
+.rating-text {
+    margin-left: auto;
+}
+/*-----*/
+
+/*Styles for section top trainers*/
+.trainer-block{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.present-card{
+    grid-column: span 1;
+
+    border-radius: 14px;
+    border-color: var(--color-lime);
+    border-style: solid;
+    border-width: 2px;
+    padding: 40px;
+   
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.trainer-card{
+    grid-column: span 2;
+    background-color: var(--color-light-black);
+    border-radius: 14px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.accent{
+    color: var(--color-lime,  #D2FF28);
+    margin-bottom: 26px;
+}
+/*-----*/
+
+/*Styles for section Prices*/
+.prices-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+    gap: 60px;
+}
+
+.prices-card{
+    background-color: var(--color-light-black);
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;  
+} 
+
+.center-paragraphs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.prices-card{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.title-gap{
+    margin-bottom: 22px; 
+}
+
+.button-center{
+    align-self: center;
+    margin-top: 60px;
+}
+
+.price-gap{
+    margin-top: 92px;
+}
+
+.offers_block{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 6px; 
+    margin-top: 14px;
+    align-items: center;
+}
+
+.offers_block > img{
+    grid-column: span 1; 
+}
+
+.offers_block > p{
+    grid-column: span 1; 
+    text-align: start;
+}
+
+.prices-card{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.prices-card > div{
+    flex-grow: 1;
+}
+/*-----*/
+
+/*Styles for section fast communication*/
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+}
+
+.form-group > button{
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+.form-group > input, .form-group > textarea{
+   background-color: var(--color-light-black);
+   border: solid;
+   border-width: 3px;
+   border-color: transparent;
+   padding: 18px;
+   border-radius: 12px;
+   margin-top: 12px;
+   outline: none;
+}
+
+.contact-form{
+    margin-top: 40px;
+}
+
+textarea {
+    height: 126px;
+    resize: none;
+}
+
+.form-group > input:hover,
+.form-group > textarea:hover,
+.form-group > input:active,
+.form-group > textarea:active,
+.form-group > input:focus,
+.form-group > textarea:focus {
+  border-color: var(--color-white-smoke);
+  background-color: transparent !important;
+  outline: none; 
+}
+/*-----*/
+
+/*styles for footer*/
+footer{
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: var(--color-light-black);
+}
+/*-----*

@@ -1,0 +1,619 @@
+/*GENERAL STYLES*/
+:root{
+    /*colors*/
+    --color-white-smoke: #F3F3F3;
+    --color-lime: #D2FF28;
+    --color-slate-gray: #6F7D8C;
+    --color-rich-black: #070809;
+    --color-light-black: #1D1D1D;
+    --color-white: #fff;
+
+    /*text sizes*/
+    --h1: 60px;
+    --h2: 56px;
+    --h3: 30px;
+    --extra-large: 26px;
+    --large: 24px;
+    --usual: 22px;
+    --small: 20px;
+
+    /*fonts-families*/
+    --electrolize: "Electrolize", sans-serif;
+    --mulish: "Mulish", sans-serif;
+
+    /*font boldness*/
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+}
+
+/*styles assignment*/
+/*TEXT ELEMENT CLASSES*/
+/*? .slogan - only for banner slogan*/
+/*? .title, .title-accent - only for titles*/
+/*? .sub-slogan - only for sub-slogan*/
+/*? .text-extra-large-bold - for price package types*/
+/*? .text-large-regular - for footer info*/
+/*? .text-large-bold - for buttons, trainers names, services names*/
+/*? .text-usual-regular - for about cards, choose cards, services cards, trainers cards, prices attention, prices cards, communication form*/
+/*? .text-usual-bold - for prices cards for price*/
+/*? .text-small-regular - for rating score (services), gift cards (trainers)*/
+/*? .text-small-bold - for menu items*/
+
+.slogan, .title, .title-accent, .sub-slogan{
+    font-family: var(--electrolize);
+    color: var(--color-white-smoke);
+    font-weight: var(--font-weight-regular);
+
+}
+.slogan{
+    font-size: var(--h1);
+    text-align: center;
+}
+
+.title, .title-accent{
+    font-size: var(--h2);
+}
+
+.title-accent{
+    color: var(--color-lime);
+}
+
+.sub-slogan{
+    font-size: var(--h3);
+    text-align: center;
+}
+
+.text-extra-large-bold, .text-large-regular, 
+.text-large-bold, .text-usual-regular, 
+.text-usual-bold, .text-small-regular, 
+.text-small-bold{
+    font-family: var( --mulish);
+}
+
+.text-extra-large-bold, .text-large-bold, 
+.text-usual-bold, .text-small-bold{
+    font-weight: var(--font-weight-bold);
+}
+
+.text-large-regular,.text-usual-regular, 
+.text-small-regular{
+    font-weight: var(--font-weight-regular);
+}
+
+.text-extra-large-bold{
+    font-size: var(--extra-large);
+}
+
+.text-large-regular, .text-large-bold{
+    font-size: var(--large);
+}
+
+.text-usual-regular, .text-usual-bold{
+    font-size: var(--usual);
+}
+
+.text-small-regular, .text-small-bold{
+    font-size: var(--small);
+}
+
+
+/*make footer pressed to the bottom of the page*/
+body, html{
+    height: 100%;
+}
+
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper > main{
+    flex-grow: 1;
+}
+
+@media (max-width: 1440px) { 
+    .container {
+        max-width: none; 
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .star-image{
+        width: 32px;
+        height: auto;
+    }
+
+    .gap-paragraph{
+        margin-bottom: 38px;
+    }
+}
+
+@media (max-width: 1340px) { 
+    .star-image{
+        width: 26px;
+        height: auto;
+    }
+
+    .gap-paragraph{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1260px) { 
+    .container {
+        max-width: none; 
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .carousel-card {
+        padding: 30px 40px;
+    }
+
+    .message_float{
+        margin-left: 60px;
+    }
+
+    .services_wrapper{
+        gap: 40px;
+    }
+
+    .star-image{
+        width: 24px;
+        height: auto;
+    }
+
+    .prices-wrapper{
+        gap: 40px;
+    }
+
+     .price-gap{
+        margin-top: 48px;
+    }
+
+    .button-center{
+        margin-top: 46px;
+    }
+}
+
+@media (max-width: 1180px){
+    .avg-text{
+        display: none;
+    }
+
+    .services-card, .prices-card{
+        padding: 22px;
+        border-radius: 12px;
+    } 
+
+    .prices-card{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    } 
+
+    .prices-check-img{
+        width: 30px;
+        height: auto;
+    }
+}
+
+@media (max-width: 1020px) {    
+    .navbar-menu{
+        z-index: 1;
+        position: absolute;
+        background-color: var(--color-rich-black);
+        top: 60px;
+        width: 100%;
+        right: 0;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-icons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    .nav-icon-image{
+        width: 34px;
+        height: auto;
+    }
+
+    .nav-bar-item-1{
+        margin-top: -200px;
+    }
+
+    .carousel-card {
+        padding: 30px 20px;
+    }
+
+    .message_float{
+        margin-left: 40px;
+    }
+
+    .services-card, .prices-card{
+        padding: 18px;
+        border-radius: 10px;
+    } 
+ 
+    .trainer-card{
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        padding: 30px;
+    }
+
+    .accent{
+        text-align: center;
+    }
+
+    .second-trainer {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .second-trainer img {
+        order: 2; 
+    }
+
+    .second-trainer > div {
+        order: 1; 
+    }
+
+    .present-card{
+        padding: 20px;
+    }
+
+    .form-group > input, .form-group > textarea{
+        padding: 16px;
+    }
+
+
+}
+
+@media (max-width: 960px) { 
+   :root{
+        --h1: 48px;
+        --h2: 36px;
+        --h3: 26px;
+        --extra-large: 22px;
+        --large: 20px;
+        --usual: 18px;
+        --small: 16px;
+    }
+
+    .container {
+        max-width: none; 
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+
+@media (max-width: 840px) { 
+    .carousel-button, .carousel-pagination{
+        display: none;
+    }
+
+    .carousel-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+        padding: 0px;
+    }
+
+    .carousel-card {
+        grid-column: span 1; 
+    }
+
+    .message_float{
+        margin-left: 30px;
+    }
+
+    .form-group > input, .form-group > textarea{
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+}
+
+@media (max-width: 820px) {
+    .services_wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prices-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trainer-block{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .present-card{
+        grid-column: span 1;
+    }
+
+    .trainer-card{
+        grid-column: span 1;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .accent{
+        text-align: start;
+    }
+
+    .second-trainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .second-trainer-card{
+        display: flex; 
+        flex-direction: column;
+    }
+
+    .second-trainer-card > .trainer-card {
+        order: 2; 
+    }
+
+    .second-trainer-card > .present-card {
+        order: 1; 
+        width: 100%;
+    }
+
+    .text-center{
+        text-align: center;
+    }
+
+    .price-gap{
+        margin-top: 48px;
+    }
+
+    .button-center{
+        margin-top: 40px;
+    }
+
+    .prices-card{
+        padding-top: 28px;
+        padding-bottom: 28px;
+    } 
+
+    .prices-check-img{
+        width: 28px;
+        height: auto;
+    }
+
+    .prices-wrapper{
+        gap: 36px;
+    }
+
+}
+
+@media (max-width: 680px) { 
+   :root{
+        --h1: 40px;
+        --h2: 30px;
+        --h3: 22px;
+        --extra-large: 18px;
+        --large: 16px;
+        --usual: 14px;
+        --small: 12px;
+    }
+
+    .navbar-logo{
+        width: 84px;
+        height: auto;
+    }
+
+    .nav-icon-image{
+        width: 26px;
+        height: auto;
+    }
+
+    .navbar-menu{
+        gap: 26px;
+    }
+
+    .button-usual, .button-small{
+        padding: 12px 26px;
+    }
+
+    .button-small{
+        padding: 10px 22px;
+    }
+
+    .first-section-content > .button-usual {
+        margin-top: 60px;
+    }
+
+    .carousel-icon {
+        width: 46px;
+        height: auto;
+    }
+
+    .message_float{
+        margin-left: 0px;
+    }
+
+    .imessage {
+        gap: 40px;
+    }
+
+    .trainer-card{
+        padding: 20px;
+    }
+
+    .form-group > input, .form-group > textarea{
+        padding: 12px;
+        border-width: 2px;
+    }
+
+    textarea {
+        height: 96px;
+        resize: none;
+}
+
+}
+
+@media (max-width: 560px) {
+    .services_wrapper, .prices-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 280px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .trainer-card{
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        max-width: 280px;
+        margin-right: auto;
+        margin-left: auto;
+        gap: 20px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .present-card{
+        max-width: 280px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .fit-image-center {
+        border-radius: 10px;
+    }
+
+    .accent{
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    .trainer-block{
+        gap: 20px;
+    }
+
+    .price-gap{
+        margin-top: 40px;
+    }
+
+    .button-center{
+        margin-top: 40px;
+    }
+
+    .prices-card{
+        padding-top: 26px;
+        padding-bottom: 26px;
+    } 
+
+    .prices-check-img{
+        width: 26px;
+        height: auto;
+    }
+}
+
+@media (max-width: 460px) { 
+   :root{
+        --h1: 36px;
+        --h2: 28px;
+        --h3: 20px;
+        --extra-large: 16px;
+        --large: 14px;
+        --usual: 12px;
+        --small: 10px;
+    }
+
+    .container {
+        max-width: none; 
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .navbar-logo{
+        width: 80px;
+        height: auto;
+    }
+
+    .nav-icon-image{
+        width: 24px;
+        height: auto;
+    }
+
+    .navbar-menu{
+        gap: 20px;
+    }
+
+    .button-usual, .button-small{
+        border-width: 2px;
+        border-radius: 8px;
+        padding: 10px 24px;
+    }
+
+    .button-small{
+        padding: 8px 18px;
+    }
+
+    .first-section-content{
+        margin-top: 120px;
+    }
+
+    .first-section-content > .button-usual {
+        margin-top: 52px;
+        margin-bottom: 120px;
+    }
+
+    .carousel-icon {
+        width: 40px;
+        height: auto;
+    }
+
+    .carousel-wrapper {
+        gap: 28px;
+    }
+
+    .third-section-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .imessage {
+        margin-top: 34px;
+        margin-left: 20px;
+        gap: 34px;
+    }
+
+    .imessage p {
+        border-radius: 10px;
+        max-width: 460px;
+        padding: 18px;
+    }
+}
+
+@media (max-width: 340px) { 
+    .carousel-button, .carousel-pagination{
+        display: none;
+    }
+
+    .carousel-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 26px;
+        padding: 0px;
+    }
+
+    .carousel-card {
+        grid-column: span 1; 
+    }
+
+}
