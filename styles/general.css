@@ -277,6 +277,11 @@ body, html{
         padding: 16px;
     }
 
+    footer{
+        padding-top: 36px;
+        padding-bottom: 22px;
+        margin-top: 60px;
+    }
 
 }
 
@@ -295,6 +300,28 @@ body, html{
         max-width: none; 
         margin-left: 40px;
         margin-right: 40px;
+    }
+
+    footer{
+        padding-top: 30px;
+        padding-bottom: 18px;
+    }
+
+    #successPopup, #contactPopup{
+        width:340px; 
+        height:340px; 
+    }
+
+    .image-button {
+        top: 18px;  
+        right: 18px;
+        width: 30px;
+        height: 30px;
+    }
+
+    #successPopup > p, #contactPopup > p{
+        margin-left: 18px;
+        margin-right: 18px;
     }
 }
 
@@ -463,8 +490,38 @@ body, html{
     textarea {
         height: 96px;
         resize: none;
-}
+    }
 
+    .nav-bar-item-1{
+        margin-top: -300px;
+    }
+
+    footer > div > p{
+        margin-bottom: 4px;
+    }
+
+    footer{
+        padding-top: 28px;
+        padding-bottom: 14px;
+        margin-top: 40px;
+    }
+
+    #successPopup, #contactPopup{
+        width:300px; 
+        height:300px; 
+    }
+
+    .image-button {
+        top: 16px;  
+        right: 16px;
+        width: 28px;
+        height: 28px;
+    }
+
+    #successPopup > p, #contactPopup > p{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
 }
 
 @media (max-width: 560px) {
@@ -521,6 +578,10 @@ body, html{
     .prices-check-img{
         width: 26px;
         height: auto;
+    }
+
+    .nav-bar-item-1{
+        margin-top: -400px;
     }
 }
 
@@ -598,6 +659,32 @@ body, html{
         max-width: 460px;
         padding: 18px;
     }
+
+    footer{
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    #successPopup, #contactPopup{
+        width:240px; 
+        height:240px; 
+    }
+
+    .image-button {
+        top: 14px;  
+        right: 14px;
+        width: 26px;
+        height: 26px;
+    }
+
+    #successPopup > p, #contactPopup > p{
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    #contactPopup > .text-small-regular{
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 340px) { 
@@ -616,4 +703,29 @@ body, html{
         grid-column: span 1; 
     }
 
+    .nav-bar-item-1{
+        margin-top: -400px;
+    }
+
+    #successPopup, #contactPopup{
+        width:180px; 
+        height:180px; 
+    }
+
+    .image-button {
+        top: 12px;  
+        right: 12px;
+        width: 24px;
+        height: 24px;
+    }
+
+    #successPopup > p, #contactPopup > p{
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    #contactPopup > .text-small-regular{
+        margin-bottom: 20px;
+        margin-top: 24px;
+    }
 }

@@ -83,3 +83,49 @@ prevButton.addEventListener('click', () => {
 });
 
 updateCarousel();
+
+//first baner button
+document.getElementById("close-contact-popup").addEventListener("click", () => {
+    document.getElementById("contactPopup").style.display = "none";
+});
+
+document.getElementById("consultation-btn").addEventListener("click", () => {
+    document.getElementById("contactPopup").style.display = "flex";
+});
+/*
+document.getElementById("openInstagram").addEventListener("click", function() {
+    window.open("https://www.instagram.com/toxic.granny", "_blank");
+});
+*/
+
+//form
+const form = document.getElementById("contactForm");
+const popup = document.getElementById("successPopup");
+
+form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+    try {
+        const response = await fetch("https://formspree.io/f/xovndlkl", {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        });
+        if (response.ok) {
+            popup.style.display = "flex";
+            form.reset();
+        } else {
+            alert("Error sending form");
+        }
+    } catch (error) {
+        alert("Network error");
+    }
+});
+
+document.getElementById("close-popup").addEventListener("click", () => {
+    document.getElementById("successPopup").style.display = "none";
+});
+
+
+

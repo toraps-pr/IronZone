@@ -42,6 +42,7 @@
     background-color: var(--color-lime);
     color: var(--color-rich-black);
     border-color: transparent;
+    cursor: pointer;
 }
 
 .button-small{
@@ -78,6 +79,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    display: grid;
+    grid-template-rows: auto 1fr; 
 }
 
 body {
@@ -102,6 +106,7 @@ body {
 
 .nav-container{
     background-color: transparent;
+    grid-row: 1;
 }
 
 .navbar{
@@ -142,20 +147,48 @@ body {
 
 /*Styles for the baner section*/ 
 .first-section-content{ 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    margin-top: 110px; 
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 } 
 
 .first-section-content > .button-usual { 
     margin-top: 80px; 
-    margin-bottom: 110px; 
 } 
 
 .first-section-content > h3 { 
     margin-top: 30px; 
 }
+
+#contactPopup{
+    display:none;
+    position:fixed; 
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%,-50%);
+    width:400px; 
+    height:400px; 
+    background:var(--color-light-black); 
+    color:var(--color-white-smoke);
+    justify-content:center;
+    text-align: start;
+    border-radius:10px; 
+    box-shadow:0 0 20px rgba(0,0,0,0.3); 
+    flex-direction: column;
+    z-index:9999;
+}
+
+#contactPopup > .text-small-regular{
+    margin-bottom: 40px;
+}
+
+#contactPopup > p{
+    margin-bottom: 4px;
+}
+
 /*-----*/ 
 
 /*Styles for the Who we are section*/
@@ -479,10 +512,49 @@ textarea {
 .form-group > textarea:active,
 .form-group > input:focus,
 .form-group > textarea:focus {
-  border-color: var(--color-white-smoke);
-  background-color: transparent !important;
-  outline: none; 
+    border-color: var(--color-white-smoke);
+    background-color: transparent !important;
+    outline: none; 
 }
+
+#successPopup{
+    display:none;
+    position:fixed; 
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%,-50%);
+    width:400px; 
+    height:400px; 
+    background:var(--color-light-black); 
+    color:var(--color-white-smoke);
+    align-items:center; 
+    justify-content:center;
+    text-align: center;
+    border-radius:10px; 
+    box-shadow:0 0 20px rgba(0,0,0,0.3); 
+    z-index:9999;
+}
+
+.image-button {
+    position: absolute;
+    top: 20px;  
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/close_modal.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#successPopup, #contactPopup > p{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 /*-----*/
 
 /*styles for footer*/
@@ -490,5 +562,10 @@ footer{
     padding-top: 60px;
     padding-bottom: 40px;
     background-color: var(--color-light-black);
+    margin-top: 80px;
+}
+
+footer > div > p{
+    margin-bottom: 6px;
 }
 /*-----*
