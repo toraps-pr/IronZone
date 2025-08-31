@@ -97,7 +97,6 @@
     font-size: var(--small);
 }
 
-
 /*make footer pressed to the bottom of the page*/
 body, html{
     height: 100%;
@@ -307,7 +306,7 @@ body, html{
         padding-bottom: 18px;
     }
 
-    #successPopup, #contactPopup{
+    #successPopup, #contactPopup, #thankYouPopup, #thanksForChoosing{
         width:340px; 
         height:340px; 
     }
@@ -319,9 +318,39 @@ body, html{
         height: 30px;
     }
 
-    #successPopup > p, #contactPopup > p{
+    #successPopup > p, #contactPopup > p, #thankYouPopup > p, #thanksForChoosing > p{
         margin-left: 18px;
         margin-right: 18px;
+    }
+    
+    .signup-popup, .purchase-popup {
+        width: 540px;
+        height: 540px;
+        border-radius: 14px;
+        padding: 30px;
+    }
+
+    .popup-ok-button{
+        bottom: 30px;  
+        right: 30px;
+    }
+
+    .form-signup-group, .form-purchase-group{
+        margin-bottom: 20px;
+    }
+
+    .form-signup-group > input, .form-purchase-group > input {
+        border-width: 2px;
+        padding: 14px;
+        border-radius: 10px;
+        margin-top: 8px;
+    }
+
+    .image-button-light{
+        top: 18px;  
+        right: 18px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -506,7 +535,7 @@ body, html{
         margin-top: 40px;
     }
 
-    #successPopup, #contactPopup{
+    #successPopup, #contactPopup, #thankYouPopup, #thanksForChoosing{
         width:300px; 
         height:300px; 
     }
@@ -518,9 +547,42 @@ body, html{
         height: 28px;
     }
 
-    #successPopup > p, #contactPopup > p{
+    #successPopup > p, #contactPopup > p, #thankYouPopup > p, #thanksForChoosing > p{
         margin-left: 16px;
         margin-right: 16px;
+    }
+
+    #signupForm > p, #purchaseForm > p{
+        margin-bottom: 30px;
+    }
+
+    .signup-popup, .purchase-popup {
+        width: 420px;
+        height: 420px;
+        border-radius: 12px;
+        padding: 20px;
+    }
+
+    .popup-ok-button{
+        bottom: 20px;  
+        right: 20px;
+    }
+
+    .form-signup-group, .form-purchase-group{
+        margin-bottom: 18px;
+    }
+
+    .form-signup-group > input, .form-purchase-group > input{
+        padding: 12px;
+        border-radius: 10px;
+        margin-top: 6px;
+    }
+    
+    .image-button-light{
+        top: 18px;  
+        right: 18px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -582,6 +644,35 @@ body, html{
 
     .nav-bar-item-1{
         margin-top: -400px;
+    }
+
+    #signupForm > p, #purchaseForm > p{
+        margin-bottom: 20px;
+    }
+
+    .signup-popup, .purchase-popup {
+        width: 380px;
+        height: 380px;
+        padding: 18px;
+    }
+
+    .popup-ok-button{
+        bottom: 18px;  
+        right: 18px;
+    }
+
+    .form-signup-group, .form-purchase-group{
+        margin-bottom: 16px;
+    }
+
+    .form-signup-group > input, .form-purchase-group > input{
+        padding: 10px;
+        border-radius: 8px;
+    }
+    
+    .image-button-light{
+        width: 28px;
+        height: 28px;
     }
 }
 
@@ -665,7 +756,7 @@ body, html{
         padding-bottom: 10px;
     }
 
-    #successPopup, #contactPopup{
+    #successPopup, #contactPopup, #thankYouPopup, #thanksForChoosing{
         width:240px; 
         height:240px; 
     }
@@ -677,7 +768,7 @@ body, html{
         height: 26px;
     }
 
-    #successPopup > p, #contactPopup > p{
+    #successPopup > p, #contactPopup > p, #thankYouPopup > p, #thanksForChoosing > p{
         margin-left: 14px;
         margin-right: 14px;
     }
@@ -685,6 +776,35 @@ body, html{
     #contactPopup > .text-small-regular{
         margin-bottom: 30px;
     }
+
+    #signupForm > p, #purchaseForm > p{
+        margin-bottom: 16px;
+    }
+
+    .signup-popup, .purchase-popup {
+        width: 320px;
+        height: 320px;
+        padding: 16px;
+    }
+
+    .popup-ok-button{
+        bottom: 16px;  
+        right: 16px;
+    }
+
+    .form-signup-group, .form-purchase-group{
+        margin-bottom: 10px;
+    }
+
+    .form-signup-group > input, .form-purchase-group > input{
+        padding: 8px;
+    }
+    
+    .image-button-light{
+        width: 26px;
+        height: 26px;
+    }
+  
 }
 
 @media (max-width: 340px) { 
@@ -707,7 +827,7 @@ body, html{
         margin-top: -400px;
     }
 
-    #successPopup, #contactPopup{
+    #successPopup, #contactPopup, #thankYouPopup, #thanksForChoosing{
         width:180px; 
         height:180px; 
     }
@@ -719,7 +839,7 @@ body, html{
         height: 24px;
     }
 
-    #successPopup > p, #contactPopup > p{
+    #successPopup > p, #contactPopup > p, #thankYouPopup > p, #thanksForChoosing > p{
         margin-left: 12px;
         margin-right: 12px;
     }
@@ -727,5 +847,35 @@ body, html{
     #contactPopup > .text-small-regular{
         margin-bottom: 20px;
         margin-top: 24px;
+    }
+
+    #signupForm > p, #purchaseForm > p{
+        margin-bottom: 10px;
+    }
+
+    .signup-popup, .purchase-popup {
+        width: 280px;
+        height: 280px;
+        padding: 10px;
+    }
+
+    .popup-ok-button{
+        bottom: 10px;  
+        right: 10px;
+    }
+
+    .form-signup-group, .form-purchase-group{
+        margin-bottom: 8px;
+    }
+
+    .form-signup-group > input, .form-purchase-group > input{
+        padding: 6px;
+    }
+    
+    .image-button-light{
+        width: 20px;
+        height: 20px;
+        top: 10px;  
+        right: 10px;
     }
 }

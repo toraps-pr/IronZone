@@ -188,7 +188,6 @@ body {
 #contactPopup > p{
     margin-bottom: 4px;
 }
-
 /*-----*/ 
 
 /*Styles for the Who we are section*/
@@ -396,6 +395,72 @@ h2 > span {
     color: var(--color-lime,  #D2FF28);
     margin-bottom: 26px;
 }
+
+.signup-popup, .purchase-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: var(--color-rich-black);
+    color: var(--color-white-smoke);
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    border-style: solid;
+    border-color: var(--color-lime);
+    border-width: 2px;
+}
+
+.popup-ok-button{
+    position: absolute;
+    bottom: 40px;  
+    right: 40px;
+}
+
+.form-signup-group, .form-purchase-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.form-signup-group > input, .form-purchase-group > input{
+    background-color: var(--color-light-black);
+    border: solid;
+    border-width: 3px;
+    border-color: transparent;
+    padding: 14px;
+    border-radius: 12px;
+    margin-top: 10px;
+    outline: none;
+}
+
+.form-signup-group > input:hover,
+.form-signup-group > input:active,
+.form-signup-group> input:focus,
+.form-purchase-group > input:hover,
+.form-purchase-group > input:active,
+.form-purchase-group > input:focus {
+    border-color: var(--color-white-smoke);
+    background-color: transparent !important;
+    outline: none; 
+}
+
+.hidden-popup {
+    display: none;
+}
+
+.popup-content{
+     width: 100%;
+}
+
+#signupForm > p, #purchaseForm > p {
+    margin-bottom: 40px;
+}
 /*-----*/
 
 /*Styles for section Prices*/
@@ -517,7 +582,7 @@ textarea {
     outline: none; 
 }
 
-#successPopup{
+#successPopup, #thankYouPopup, #thanksForChoosing{
     display:none;
     position:fixed; 
     top:50%; 
@@ -535,7 +600,7 @@ textarea {
     z-index:9999;
 }
 
-.image-button {
+.image-button, .image-button-light {
     position: absolute;
     top: 20px;  
     right: 20px;
@@ -550,7 +615,18 @@ textarea {
     background-color: transparent;
 }
 
-#successPopup, #contactPopup > p{
+.image-button-light{
+    background-image: url("../images/close_modal_light.png");
+    top: 20px;  
+    right: 20px;
+}
+
+#successPopup > p, #contactPopup > p{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#thanksForChoosing > .popup-content > p {
     margin-left: 20px;
     margin-right: 20px;
 }

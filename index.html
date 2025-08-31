@@ -236,6 +236,45 @@
                         <img src="images/trainer 3.png" alt="" class="fit-image-center">
                     </div>
                 </div>
+
+                <!-- Popup with form -->
+                <div id="signupPopup" class="signup-popup hidden-popup text-small-regular">
+                    <form id="signupForm" class="popup-content">
+                        <button id="close-signup-popup" class="image-button-light"></button>
+                        <p>To sign up for a consultation, leave your contact details:</p>
+                        
+                        <!-- Name -->
+                        <div class="form-signup-group">
+                            <label for="signup-name">Your name</label>
+                            <input type="text" id="signup-name" name="name" required placeholder="Bob" class="text-small-regular text-color-white"/>
+                        </div>
+
+                        <!-- E-mail -->
+                        <div class="form-signup-group">
+                            <label for="signup-email">Your e-mail</label>
+                            <input type="email" id="signup-email" name="email" required placeholder="bob@example.com" class="text-small-regular text-color-white"/>
+                        </div>
+                        
+                        <!-- Phone number -->
+                        <div class="form-signup-group">
+                            <label for="signup-phone">Your phone number</label>
+                            <input type="tel" id="signup-phone" name="phone" required placeholder="+380XXXXXXXXX" class="text-small-regular text-color-white"/>
+                        </div>
+                       
+                        <!-- Hiden trainer name -->
+                        <input type="hidden" name="trainer" id="trainerName">
+
+                        <button type="submit" class="button-small text-small-bold popup-ok-button">OK</button>
+                    </form>
+                </div>
+
+                <!-- popup thank you -->
+                <div id="thankYouPopup" class="hidden-popup text-color-white text-small-regular">
+                    <div class="popup-content">
+                        <p>Thank you for signing up!<br>We will contact you soon!</p>
+                        <button id="closeThankYou" class="image-button"></button>
+                    </div>
+                </div>
            </section>
 
             <!--Section Prices-->
@@ -249,7 +288,7 @@
 
                     <div class="prices-card">
                         <div>
-                            <p class="text-extra-large-bold text-center title-gap">Standard</p>
+                            <p class="text-extra-large-bold text-center title-gap title-card">Standard</p>
                             <div class="offers_block">
                                 <img src="images/check.png" alt="" class="prices-check-img">
                                 <p class="text-usual-regular">Access to basic equipment</p>
@@ -272,7 +311,7 @@
                     
                     <div class="prices-card">
                         <div>
-                            <p class="text-extra-large-bold text-center title-gap">Average</p>
+                            <p class="text-extra-large-bold text-center title-gap title-card">Average</p>
                             <div class="offers_block">
                                 <img src="images/check.png" alt="" class="prices-check-img">
                                 <p class="text-usual-regular">Access to all equipment</p>
@@ -295,7 +334,7 @@
 
                     <div class="prices-card">
                         <div>
-                            <p class="text-extra-large-bold text-center title-gap">Pro</p>
+                            <p class="text-extra-large-bold text-center title-gap title-card">Pro</p>
                             <div class="offers_block">
                                 <img src="images/check.png" alt="" class="prices-check-img">
                                 <p class="text-usual-regular">Access to all equipment</p>
@@ -314,6 +353,45 @@
                         
                         <p class="text-usual-bold accent text-center price-gap">30$ per month</p>
                         <button class="button-small text-small-bold button-center">Buy now</button>
+                    </div>
+                </div>
+
+                 <!-- Popup with form -->
+                <div id="purchasePopup" class="purchase-popup hidden-popup text-small-regular">
+                    <form id="purchaseForm" class="popup-content">
+                        <button id="close-purchase-popup" class="image-button-light"></button>
+                        <p>To purchase a service package, leave your contact details:</p>
+                        
+                        <!-- Name -->
+                        <div class="form-purchase-group">
+                            <label for="purchase-name">Your name</label>
+                            <input type="text" id="purchase-name" name="name" required placeholder="Bob" class="text-small-regular text-color-white"/>
+                        </div>
+
+                        <!-- E-mail -->
+                        <div class="form-purchase-group">
+                            <label for="purchase-email">Your e-mail</label>
+                            <input type="email" id="purchase-email" name="email" required placeholder="bob@example.com" class="text-small-regular text-color-white"/>
+                        </div>
+                        
+                        <!-- Phone number -->
+                        <div class="form-purchase-group">
+                            <label for="purchase-phone">Your phone number</label>
+                            <input type="tel" id="purchase-phone" name="phone" required placeholder="+380XXXXXXXXX" class="text-small-regular text-color-white"/>
+                        </div>
+                       
+                        <!-- Hiden package type -->
+                        <input type="hidden" name="package" id="package-type">
+
+                        <button type="submit" class="button-small text-small-bold popup-ok-button">OK</button>
+                    </form>
+                </div>
+
+                <!-- popup thank you -->
+                <div id="thanksForChoosing" class="hidden-popup text-color-white text-small-regular">
+                    <div class="popup-content">
+                        <p>Thank you for choosing one of our plans!<br>We will contact you soon!</p>
+                        <button id="closeThanksForChoosing" class="image-button"></button>
                     </div>
                 </div>
 

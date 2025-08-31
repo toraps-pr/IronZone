@@ -1,7 +1,7 @@
-let openBtn = document.querySelector(".menu-icon");
-let closeBtn = document.querySelector(".close-icon");
-let menu = document.querySelector(".navbar-menu");
-let navContainer = document.querySelector(".nav-container");
+const openBtn = document.querySelector(".menu-icon");
+const closeBtn = document.querySelector(".close-icon");
+const menu = document.querySelector(".navbar-menu");
+const navContainer = document.querySelector(".nav-container");
 
 openBtn.addEventListener("click",()=>{
     openBtn.classList.toggle("hide");
@@ -92,13 +92,8 @@ document.getElementById("close-contact-popup").addEventListener("click", () => {
 document.getElementById("consultation-btn").addEventListener("click", () => {
     document.getElementById("contactPopup").style.display = "flex";
 });
-/*
-document.getElementById("openInstagram").addEventListener("click", function() {
-    window.open("https://www.instagram.com/toxic.granny", "_blank");
-});
-*/
 
-//form
+//form of fast communication
 const form = document.getElementById("contactForm");
 const popup = document.getElementById("successPopup");
 
@@ -128,4 +123,120 @@ document.getElementById("close-popup").addEventListener("click", () => {
 });
 
 
+//SIGN UP POPUP LOGIC
+const signupButtons = document.querySelectorAll(".present-card button");
+const signupPopup = document.getElementById("signupPopup");
+const thankYouPopup = document.getElementById("thankYouPopup");
+const signupForm = document.getElementById("signupForm");
+const trainerInput = document.getElementById("trainerName");
+const closeSignupPopup = document.getElementById("close-signup-popup");
+const closeThankYou = document.getElementById("closeThankYou");
 
+// Open the form and choose the trainer
+signupButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const trainerCard = button.closest(".trainer-block").querySelector(".trainer-card .accent");
+        if (trainerCard) {
+            trainerInput.value = trainerCard.textContent.trim();
+        } else {
+            trainerInput.value = "Unknown trainer";
+        }
+        signupPopup.style.display = "flex";
+    });
+});
+
+// Close the form
+closeSignupPopup.addEventListener("click", () => {
+    signupPopup.style.display = "none";
+});
+
+//Close thank you popup
+closeThankYou.addEventListener("click", () => {
+    thankYouPopup.style.display = "none";
+});
+
+// Sending the form
+signupForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(signupForm);
+
+    try {
+        const response = await fetch("https://formspree.io/f/xrbakaor", {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+            signupPopup.style.display = "none";
+            thankYouPopup.style.display = "flex";
+            signupForm.reset();
+        } else {
+            alert("Error while sending form.");
+        }
+    } catch (error) {
+        alert("Network error.");
+    }
+});
+
+
+// PURCHASE POPUP LOGIC 
+const purchasePopup = document.getElementById("purchasePopup");
+const purchaseForm = document.getElementById("purchaseForm");
+const closePurchasePopup = document.getElementById("close-purchase-popup");
+const thanksForChoosing = document.getElementById("thanksForChoosing");
+const closeThanksForChoosing = document.getElementById("closeThanksForChoosing");
+const packageInput = document.getElementById("package-type");
+const buyButtons = document.querySelectorAll("#prices .prices-card button");
+
+buyButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        // searching for tiitle of package
+        const packageCard = button.closest(".prices-card");
+        const packageTitle = packageCard.querySelector(".title-card");
+        
+        if (packageTitle) {
+            packageInput.value = packageTitle.textContent.trim();
+        } else {
+            packageInput.value = "Unknown package";
+        }
+
+        purchasePopup.style.display = "flex";
+    });
+});
+
+// Close the popup
+closePurchasePopup.addEventListener("click", () => {
+    purchasePopup.style.display = "none";
+});
+
+// sending the form to Formspree
+purchaseForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(purchaseForm);
+
+    try {
+        const response = await fetch("https://formspree.io/f/movnwpkp", {
+            method: "POST",
+            body: formData,
+            headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+            purchasePopup.style.display = "none";  
+            thanksForChoosing.style.display = "flex"; 
+            purchaseForm.reset();
+        } else {
+            alert("Error sending form");
+        }
+    } catch (error) {
+        alert("Network error");
+    }
+});
+
+// close thanks popup
+closeThanksForChoosing.addEventListener("click", () => {
+    thanksForChoosing.style.display = "none";
+});
